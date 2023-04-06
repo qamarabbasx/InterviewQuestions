@@ -1,3 +1,4 @@
+// using bitwise operator
 let num = parseInt(prompt('Enter a number'));
 // & is bitwise operator num & 1 means num&1 == 1
 if (num & 1) {
