@@ -24,6 +24,13 @@ Promise.resolve()
   .then(() => console.log('Console Inside promise'));
 console.log('2');
 
+// Output
+// 1
+// 2
+// Console Inside promise
+// Hello im in First TimeOut
+// setTimeOut inside Promise
+
 // second way to use promise
 
 console.log('1');
@@ -42,3 +49,30 @@ promise
     }, 0);
   });
 console.log('2');
+
+
+// Another Example of using setTimeout with let and var scopes
+// When using let it creates lexical scope for each iteration and takes settimeout and actual value of i in eventloop
+for (let i = 1; i < 5; i++){
+  setTimeout(() => {
+    console.log(i);
+  }, 1000*i);
+}
+// output
+// 1 after one sec
+// 2 after two secs
+// 3 after three secs
+// 4 after four secs
+
+// When using var loop terminates before one sec and at the timeof console logs value of i becoms 5 so it will print 5 each time
+for (let i = 1; i < 5; i++){
+  setTimeout(() => {
+    console.log(i);
+  }, 1000*i);
+}
+// output
+// 5 after one sec
+// 5 after two secs
+// 5 after three secs
+// 5 after four secs
+
