@@ -11,6 +11,18 @@ const capitalizedNames = capitalizeFirstLetter(names);
 console.log(capitalizedNames);
 // Output: ["Bilal", "Usama", "Hassan", "Masood"]
 
+// second approach
+function fun(name) {
+    let cap= [];
+    for(let i=0; i<name.length; i++){
+        cap.push(name[i][0].toUpperCase()+name[i].substring(1));
+    }
+    return cap;
+}
+arr=["bilal","usama","hassan","masood"]
+fun(arr)
+
+
 // using for loop
 function capitalizeFirstLetter(names) {
   const capitalizedNames = [];
