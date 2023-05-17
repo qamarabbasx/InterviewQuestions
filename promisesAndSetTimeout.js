@@ -76,3 +76,30 @@ for (let i = 1; i < 5; i++){
 // 5 after three secs
 // 5 after four secs
 
+
+// Write a function that accepts an array of strings and logs each string after n seconds where n is the length of the string. 
+// For example:
+
+// In case of ['abc','d','ghi','jkla'];
+
+// abc [ after 3 seconds ]
+// d [ after 4 seconds]
+// ghi [ after 7 seconds ]
+// jkla [ after 11 seconds ]
+function logStringsAfterDelay(strings) {
+  let delay = 0;
+  
+  for (let i = 0; i < strings.length; i++) {
+    const string = strings[i];
+    const length = string.length;
+    delay += length * 1000; // Multiply length by 1000 to convert to milliseconds
+    setTimeout(() => {
+      console.log(string);
+    }, delay);
+  }
+}
+
+const strings = ['abc', 'd', 'ghi', 'jkla'];
+logStringsAfterDelay(strings);
+
+
